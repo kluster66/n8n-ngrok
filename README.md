@@ -69,7 +69,6 @@ FAQ rapide — problèmes courants
 - Si le système utilise `docker compose` (sans trait d'union) au lieu de `docker-compose`, adaptez les commandes dans les scripts.
 
 Améliorations possibles
-- Ajouter un `.env.example` (je peux le créer).
+- Ajouter un `.env.example`.
 - Ajouter un job GitHub Actions pour provisionner l'environnement de dev (optionnel).
 
-Si vous voulez que j'ajoute un `.env.example` ou que j'adapte les scripts pour détecter automatiquement `docker compose`, dites-le et je m'en occupe.
