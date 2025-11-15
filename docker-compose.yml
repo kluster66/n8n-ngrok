@@ -9,7 +9,10 @@ services:
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
       - NGROK_REGION=${NGROK_REGION}
-    command: http host.docker.internal:5678
+    volumes:
+      - ./policy.yml:/etc/ngrok/policy.yml
+    command: http host.docker.internal:5678 --traffic-policy-file /etc/ngrok/policy.yml
+
 
   n8n:
     image: n8nio/n8n:1.119.1
