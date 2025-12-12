@@ -11,11 +11,12 @@ services:
       - NGROK_REGION=${NGROK_REGION}
     volumes:
       - ./policy.yml:/etc/ngrok/policy.yml
-    command: http host.docker.internal:5678 --traffic-policy-file /etc/ngrok/policy.yml
+    #command: http host.docker.internal:5678 --traffic-policy-file /etc/ngrok/policy.yml
+    command: http host.docker.internal:5678 
 
 
   n8n:
-    image: n8nio/n8n:1.119.1
+    image: n8nio/n8n:latest
     restart: unless-stopped
     container_name: n8n
     ports:
