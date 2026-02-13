@@ -6,6 +6,10 @@ if [ ! -f .env ]; then
   exit 1
 fi
 
+# Mettre à jour les images (force le téléchargement de la dernière version)
+echo "📥 Mise à jour des images Docker..."
+docker-compose pull
+
 # Lancer ngrok seul pour récupérer l'URL
 echo "🚀 Lancement de ngrok..."
 docker-compose up -d ngrok

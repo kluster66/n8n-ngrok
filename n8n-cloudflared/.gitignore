@@ -1,2 +1,21 @@
+# Environment variables (Sensitive)
 .env
 .env.bak
+*.env
+
+# n8n local data (if ever changed to local bind mounts)
+node_modules/
+n8n_data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

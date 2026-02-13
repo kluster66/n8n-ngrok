@@ -14,6 +14,9 @@ if (-not (Test-Path -Path '.env')) {
     exit 1
 }
 
+Write-Info "Mise à jour des images Docker..."
+docker-compose pull
+
 Write-Info "Lancement de ngrok..."
 docker-compose up -d ngrok
 
