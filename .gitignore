@@ -1,24 +1,38 @@
-# Environment variables (Sensitive)
+# Environment variables (sensible)
 .env
-.env.bak
+.env.*
 *.env
+*.local
 
 # n8n local data (if ever changed to local bind mounts)
-node_modules/
 n8n_data/
 
-# OS files
+# Docker
+.docker/
+
+# Claude Code
+.claude/
+
+# Node / JS
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# OS
 .DS_Store
 Thumbs.db
 
-# IDEs and Editors
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Logs
+# Logs & temporaires
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+tmp/
+temp/
